@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Medill, Journalism, Interactive Storytelling, Jill Blackman, Northwestern University Journalism 320">
+    <meta name="description" content="Medill Journalism 320 Final Project">
+    <meta name="author" content="Rhiannon O'Berry, Ada Ogbonna, Allison Arguezo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Final Project: FOOD AVAIL</title>
+
+
+<!-- jQuery Style Sheets -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+  <script>
+      $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+<!-- End of jQuery Style Sheets -->
+
+ <!-- Styling --> 
+<style>
+
+/* Start of Javascript Styling*/
+/* Start of button styling*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #401F68;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* End of button styling*/
+/* End of Javascript styling*/
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.caption {
+  text-align: center;
+  margin-top: -25px;
+}
+
+
+/* End of Textblock styling*/
+
+
+#container  {
+    width:1300px;
+}
+
+header {
+    background-color:#401F68;
+    color:#ffffff;
+    text-align:center;
+    padding:5px;
+}
+
+/* START HORIZONTAL MENU*/
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #a3a3c2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #000000;
+}
+
+/* END HORIZONTAL MENU*/
+
+
+article {
+    width:auto;
+    float:left;
+    padding:10px;
+}
+footer {
+    background-color:#401F68;
+    color:#FFFFFF;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+
+figure {
+    float: right;
+    margin-right: 20px;
+    font-size: 11px;
+    margin-left: 0px;
+}
+
+
+aside {
+    border-width:2px;
+    border-color:#401F68;
+    border-style:solid;
+    float:right;
+    margin-left: 10px;
+    font-size: 11px;
+    margin-right: 0px;
+    padding: 5px;
+}
+
+
+
+#info {
+
+  width:300px;
+  float:left;
+  padding-right: 10px;
+
+}
+
+/* Accordian Style Sheet*/
+#accords {
+width: 300px;
+float:right;
+padding-left:10px;
+
+}
+
+#accordioncontent p{
+  font-size: 15px;
+}
+
+#accordionbox {
+ width: 800px;
+ height: 450px;
+  float:left;
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color:#401F68;
+  margin: 10px;
+  text-indent: 0px;
+  overflow: auto;}  
+
+#accordioncontent{
+display: inline-block;
+
+}
+/* End of Accordian Style Sheet*/
+/* End of Styling*/
+/* End of Head*/
+
+</style>
+</head>
+
+
+
+<!-- Body -->
+<body>
+
+<div id="container">    
+
+<header>
+<h1>MEDILL NEWS SERVICE</h1>
+</header>
+
+
+<!-- Javascript HTML -->
+<button onclick="topFunction()" id="myBtn" title="Go back to the top of the screen">Top ^ </button>
+<!-- End Javascript HTML -->
+
+
+
+<ul style=" background-color: #a3a3c2;">
+  <li><a class="active" href="#home">Home</a></li>
+ 
+</ul>
+
+
+<!-- Page Content -->
+<article>
+
+<div class="main_image">
+  <center><img src="photos/food_photo.jpeg" alt="Photo of a dining hall" style="width:50%; height:auto; margin-left: auto; border-style: double; border-color:black; border-width: 3px;"></center>
+  <div class="caption">
+    <center><h4>Students struggle with food insecurity during inflation</h4></center>
+    <center><p><em>Source: <a href="https://dailynorthwestern.com/2018/02/27/campus/northwestern-community-increases-efforts-address-food-insecurity-campus/#modal-photo" target="new">Carly Rubin/The Daily Northwestern</a></em></p></center>
+  </div>
+  
+</div>
+
+
+
+<h1 style="text-align:center; margin-left: auto;">Rising Inflation, Food Prices Spur Food Insecurity for Some Northwestern Students</h1>
+<h3 style="text-align:center; margin-left: auto;">By Rhiannon O’Berry, Allison Arguezo and Ada Ogbonna</h3>
+
+<div class="text_draft">
+<p>“It’s like the struggle never really ends,” says Camila Hernandez-Caballero, a junior at Northwestern University, about affording food amid inflation.<p>
+
+<p>Prices of consumer goods rose by 8.3 percent since last April according to the U.S. Bureau of Labor Statistics. Despite resources like an on-campus food pantry, some Northwestern students’ struggle with food insecurity continues to worsen.</p>
+
+<p>“I thought I wouldnt have to deal with a lot of these issues in my little Northwestern bubble,” Hernandez-Caballero says. “But, with prices increasing over the years, it's getting tougher to juggle -  like how am I supposed to take care of myself?”</p>
+
+<p>Hers is a problem Mary Deeley, Pastoral Associate with the Sheil Catholic Center and co-coordinator of the Purple Pantry, says she’s heard from many students lately. Student use of the supplemental food pantry declined during the pandemic, but Deeley says that as prices climb, more and more students are coming back.</p>
+</div>
+
+<div id="accordionbox">
+<div id="accordion">
+  <p style="text-align: center;font-size: 15px; line-height: 17px color: #ffffff"><strong>A Guide to Resources for Students with Food Insecurity</strong></p>
+  <p>Explore resources that provide students with supplemental meals, groceries and grocery money. Both Purple Pantry and Sheil Catholic Center's Weekly "Cheap Lunch" are aimed specifically at Northwestern students, while Supplemental Nutrition Assistance Program (SNAP) can be applied to any university student. For more benefits that directly help Northwestern students, the university offers a <a href="https://www.northwestern.edu/wildcard/services/list/index.html#h" title="There are more than 300 listed businesses that offer these discounts." target="new">list of businesses</a> that offer Wildcard discounts. </p>
+  <h3>Purple Pantry</h3>
+  <div id="accordioncontent">
+    <p> Student Enrichment Services and Mary Deely, Pastoral Associate with the Sheil Catholic Center, partner to manage the Purple Pantry, an on-campus food pantry at the Center(2110 Sheridan Road.) There, students can pick up groceries and snacks that accommodate vegetarian, vegan, gluten-free, kosher, and halal diets.</p> 
+  <p>Students can email the pantry at purplepantry@northwestern.edu to request an appointment, ask questions or suggest foods. Or, just sign up for an appointment using their <a href="https://forms.dosa.northwestern.edu/view.php?id=1495075" target="new">online form.</a></p>
+  </div>
+  <h3>Sheil Catholic Center Weekly "Cheap Lunch"</h3>
+  <div id="accordioncontent">
+    <p> Every Wednesday at noon, the Sheil Catholic Center at Northwestern Universtity, located at 2110 Sheridan Road, hosts its <a href="https://sheilcatholiccenter.org/serve/hospitality/" target="new">"Cheap Lunch"</a>. There, students can purchase a $2 lunch that consists of:</p>
+  <ul>
+    <li>A main dish: hot dog, veggie burger, hamburger, chicken burger, or bratwurst</li>
+    <li>Salad</li>
+    <li>chips </li>
+    <li>Soda or water</li>
+    <li>Dessert</li>
+  </ul>
+
+  <p>Students can purchase up to 2 additional meal items for $1 each. Non-students can purchase meals for $4. For more information, contact the Director of Operations at 847-328-4648.
+    </p>
+  </div>
+  <h3>Supplemental Nutrition Assistance Program</h3>
+  <div id="accordioncontent">
+  <p>Unless more than half of their meals are provided by Northwestern, all students who recieve a work-study allotment are eligible for SNAP food benefits from the Illinois Department of Human Services. Otherwise, they must work 20 hours per week or meet one of the special exceptions listed <a href="https://www.dhs.state.il.us/page.aspx?Item=13275" target="new">here. Approved students receive up to $250 per month in benefits, which is loaded onto a card accepted at most grocery stores.</p>
+  <p>Student Enrichment Services provides support to students interested in accessing SNAP benefits who fill out <a href="https://bit.ly/ContactSES2022" target="new">this form</a>. Students can apply by:</p>
+  <ul>
+  <li>Filling the application out online</li>
+  <li>Printing out the form and taking it to their local Family Community Resource Center</li>
+  <li>Filling it out in person at their local Center</li>
+  <li>Calling 1-800-843-6154; this line also takes questions</li>
+  </ul>
+<p>Next, a DHS caseworker will contact them for an interview, after which their request will be confirmed or rejected. Students denied benefits can appeal.</p>
+  
+  </div>
+  
+</div>
+</div>
+
+<div class="text_draft">
+<p>“We are seeing an increase, especially among graduate students this year, who have really been hit hard by the inflationary cycle, and in students who are newly off campus and haven’t been able to adjust yet,” says Deeley.</p>
+
+<p>Deeley found the increase of graduate students surprising. She says many of the newcomers are international students, who may face unique difficulties with finding grants and jobs. Claire Cole, a Fellow with Student Enrichment Services who helps Deeley run the Pantry, says most are also on financial aid.</p>
+
+<p>“They had based their expectation and budget on one set of circumstances,” says Deeley. “Their financial aid isn’t adjusted - you know, nothing is adjusted for this kind of inflation."</p>
+
+<p>One way Hernandez-Caballero copes is by ordering out more, as she’s found it less expensive than buying groceries. “There was a period where I doordashed my meals every single day,” she says.</p>
+
+<p>This may be because nationally, grocery prices are rising faster than restaurant prices. From April 2021 to April 2022, restaurant food prices rose by 7.2 percent, while at-home grocery prices rose by 10.8 percent. This is per the <a href="https://www.ers.usda.gov/data-products/food-price-outlook/summary-findings/" title="These findings come directly a USDA report." target="new">USDA’s Food Price Index</a>. Hernandez-Caballero worries how much worse things will become if inflation worsens.</p>
+
+<p>“It's scary talking to underclassmen because I don't know how they're going to manage,” she says. “It's really tough and I feel like there's no real help.”</p>
+
+<p>Cole says students with food insecurity can meet with an SES staff member, who will connect them with resources like help applying for state assistance, which all work study students qualify for.</p>
+
+<p>“Any problems,” says Cole, “come to us and we’re going to try our best to find a solution.”</p>
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/10258416" style="width:900px; margin-left: 130px; padding-left: 70px; padding-right: 70px; border-style: double;border-width: 4px; border-color: purple;"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+<p>The Purple Pantry started in 2016, and grew from a program that only assisted students during breaks into a supplemental pantry as described by Deeley.</p>
+
+<p>“I heard from a lot of alums,” says Deeley, “who are going ‘I wish they'd had this when I was on campus, I was always hungry.’”</p>
+
+<p>Presently, the groceries there are only meant to supplement student purchases. SES advisers direct students to other pantries in Evanston and Chicago, but Cole says other challenges posed to students with food insecurity can be time and transportation.</p>
+
+<p>“If they don’t have a car,” Cole says, “they are stuck to what’s within walking distance, so that limits the scope of what pantry they can go to and what they can bring back.”</p>
+
+<p>One barrier to further expanding the Purple Pantry’s services is labor; Deeley and Cole are at their limit in the number of hours they can dedicate weekly to the pantry. They also worry that increasing the fresh produce offered could also increase food waste.</p>
+
+<p>That’s why Deeley is excited for a new expansion plan currently being discussed. The Purple Pantry would move to a former Northwestern Dining site, where it would be staffed by Northwestern Dining workers, and leftover food would be used by another dining hall. This would be more of a grocery store type setting, increasing the options available to students.</p>
+
+<p>“It's utterly ridiculous that on a campus like Northwestern people are going hungry,” says Deeley. “That’s crazy. ”</p>
+
+<div class="flourish-embed flourish-quiz" style="width:700px; margin-left:300px;" data-src="visualisation/10281217"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+<p>Cole says a barrier to helping students with food insecurity, however, is raising awareness of these resources among students who need them. Some students like Hernandez-Caballero go through college never learning about what’s available.</p>
+
+<p>“Northwestern needs to do more really,” Hernandez-Caballero says. “I know there are resources and stuff but like they are so little, it seems like I can’t use them. Maybe I just don't know and there are things that can help me but I don't know, it sometimes feels really lonely.”</p>
+
+<p>Deeley says she and Cole aim to create an environment in which students who feel emotionally supported and overcome the stigma of seeking assistance with food insecurity. “It’s kind of near and dear to my heart,” Deeley says.</p>
+
+<p>“We just want them to know that we’re here for them,” says Cole, “and we’re working on making the pantry better and making it bigger and marketing it better; that way, we can meet student demand.”</p>
+
+<p>As SES attempts to ramp up resources available to students, the U.S.D.A. expects inflation and food prices will increase again similarly next year, putting more stress on students like Hernandez-Caballero.</p>
+
+<p>“Food insecurity, financial insecurity, job insecurity, it's all scary, especially as a young adult,” she says. “I didn't realize I was struggling until I talked to my friends. We are all kinda low-income and receive a lot of financial aid, but it seems like the prices just keep going up and up.”</p>
+
+<hr>
+
+</div>
+
+<iframe src="https://anchor.fm/adaeze-ogbonna/embed/episodes/Dealing-with-Food-Insecurity-e1jn47r/a-a831uko" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+<p>
+<strong><em>LISTEN:</strong> </em>
+</p>
+
+<p>
+<strong><em>For students like Camila, living through insecurity, whether that may be job or food related is not uncommon. Before the pandemic there were a plethora of resources to not only find food but also buy food at a reasonable price. </p>
+
+<p>Since then we are dealing with a market where the poor are shut out like never before, food and gas prices are at insane heights with job instability and dried up resources. Students are managing or just barely getting by relying on unsafe and unhealthy practices in order to survive in a world where groceries cost more than a paycheck. </p>
+
+<p>But how did we get here is the question. How did we end up in a situation where college students are struggling to make ends meet and buy simple groceries to sustain themselves? </p>
+
+<p>Camila claims that it’s always been like this, just over the years it has gotten more pronounced and harder to ignore. The struggles that students often face are getting harder and harder to deal with and Camila says that the lack of help hurts the most. </p>
+
+<p>“People always say that there are resources but where are they? I have gone through 3 years of college and never heard of purple pantry and most certainly didn’t know I qualified for SNAP” Camila said, as she walked me through how she goes about preparing for the week. </p>
+
+<p>Purple Pantry is Northwestern’s way of handling some of the food issues Northwestern students face on a daily basis but even they are experiencing hardships due to budget cuts, understaffing and an overwhelming demand with virtually no supplies. Due to the COVID-19 Pandemic, The Purple Pantry currently operates by appointment only and the snacks and food they once had are low in stock and when they are replaced are wiped clean almost immediately. </p>
+
+<p>Camila said she’s not surprised at all about the struggles Purple Pantry faces considering how tough things have gotten for everybody during these times. Meal prepping has been her saving grace and helps ensure that no matter what she will always have something to eat but the price of groceries she claims makes it harder to buy the groceries she needs to meal plan. </p>
+
+<p>“One week’s grocery of a few items now costs me between $80-$100. I don’t have the funds to be spending $100 every week on groceries, it’s just not right” she said. </p>
+
+<p> Another option many are unaware of is SNAP but even that has its own cons and requires students to go through a complicated and almost tiring process to prove that they qualify for SNAP Benefits. Still, for those who are struggling, SNAP benefits allow students an opportunity to alleviate some of the stresses when it comes to affording food. </p>
+
+<p>Overall, there are resources and places to receive help, but they are suffering and poorly underfunded especially now during the pandemic. That is why it is our responsibility, the responsibility of those who can afford food, to donate and share. </p>
+
+<p> Organizations like the Evanston Community Fridges do a phenomenal job of dealing with food insecurity by taking food donations or cash donations to their account in order to go buy groceries to stock up the fridges. All items in the fridges are free and people in the community can donate and volunteer at the fridges at any time. </p>
+
+<p> Food insecurity does not only affect those who are suffering through it but affects everyone and when we as a community come together to tackle this growing issue, we are moving one step closer to ending food insecurity for good. </strong> </em></p>
+
+
+<hr>
+
+</div>
+
+
+
+<div style="margin-left: 200px; margin-right: 200px; width: 1100px;">
+  
+<div class="row">
+  <div class="column">
+    <div class="card">
+      
+      <h1>Rhiannon O’Berry</h1>
+      <p style="padding-bottom: 10px;">is a rising senior at Northwestern University from Harrison, Georgia. Passionate about interactive storytelling, she plans to pursue a career in multimedia journalism in Atlanta after graduation.</p>
+    </div>
+  </div>
+
+ <div class="column">
+    <div class="card">
+     
+      <h1>Allison Arguezo</h1>
+      <p style="padding-bottom: 10px;">is a rising senior at  Northwestern University studying journalism and economics. Originally from St. Charles, Illinois, and passionate about telling impactful, data-drive stories, she hopes to continue a career in data journalism and multimedia.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+    
+      <h1>Ada Ogbonna</h1>
+      <p style="padding-bottom: 10px;"> is a rising senior at Northwestern University studying journalism and data science. From Ohio, her passions include data visualizations, interactive storytelling, and raising more awareness on marginalized and underrepresented communities through journalism. She hopes to pursue a role where she can give back to her communities when she graduates. </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</article>
+<!-- End of Page content -->
+
+<footer>
+Copyright © MEDILL NEWS 847
+</footer>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+</html>
+ 
+
+
